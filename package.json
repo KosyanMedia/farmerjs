@@ -1,7 +1,7 @@
 {
   "name": "formerjs",
   "description": "Template engine with unique Extra-Virgin-Single-Pass™ compiler technology",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Boris Kaplunovsky",
   "browser": "./formerjs_utils.js",
   "homepage": "https://github.com/KosyanMedia/formerjs",
