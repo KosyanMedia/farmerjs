@@ -4,6 +4,11 @@
   "version": "0.1.1",
   "author": "Boris Kaplunovsky",
   "browser": "./formerjs_utils.js",
+  "homepage": "https://github.com/KosyanMedia/formerjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KosyanMedia/formerjs.git"
+  },
   "main": "./priest.js",
   "bin": {
     "formerjs": "./bin/formerjs"
