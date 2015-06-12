@@ -1,4 +1,4 @@
-## Temple template engine
+## formerjs template engine
 
 ### Install dependencies
 ```bash
@@ -11,15 +11,15 @@ See [examples](examples/)
 
 Build examples:
 ```bash
-node ./bin/temple examples/*temple # Dump on stdout
-node ./bin/temple examples/*temple > templates.js # Dump into templates.js
+node ./bin/formerjs examples/*temple # Dump on stdout
+node ./bin/formerjs examples/*temple > templates.js # Dump into templates.js
 ```
 
 ### Use
 
-Load scripts [[temple_utils.js](temple_utils.js), [templates.js](templates.js)]
+Load scripts [[formerjs_utils.js](formerjs_utils.js), [templates.js](templates.js)]
 
-Or `cat templates.js temple_utils.js > res.js` and paste it into chrome console
+Or `cat templates.js formerjs_utils.js > res.js` and paste it into chrome console
 ```javascript
 console.log(JSON.stringify(window.templates_pool.info())); # pool is empty
 var t = window.templates_pool.get("ss"); # Load empty ss template
@@ -44,18 +44,18 @@ For example, your template file `my_template.temple` looks like:
 ```
 
 #### 2. Compile
-Build temple functions from template:
+Build formerjs functions from template:
 ```bash
-node path/to/temple/bin/temple my_template.temple > templates.js
+node path/to/formerjs/bin/formerjs my_template.temple > templates.js
 ```
 
 #### 3. Include template
-Also don't forget include `temple_utils.js`to your page, head section must look like:
+Also don't forget include `formerjs_utils.js`to your page, head section must look like:
 ```html
-<script src="temple_utils.js"></script>
+<script src="formerjs_utils.js"></script>
 <script src="templates.js"></script>
 ```
-After that you'll have `templates` variable with all your templates and temple manipulations methods.
+After that you'll have `templates` variable with all your templates and formerjs manipulations methods.
 Templates named by filename, for example you get `templates.get('my_template')`.
 
 #### 4. Fill template by data
@@ -76,7 +76,7 @@ or
 pool = templates.get('my_template')[1];
 myTemplate = pool.update(data);
 ```
-Variable `myTemplate` its array with `[0]` DOM template and `[1]` temple methods for template.
+Variable `myTemplate` its array with `[0]` DOM template and `[1]` formerjs methods for template.
 
 #### 5. Append template to DOM
 
@@ -86,7 +86,7 @@ div.appendChild(myTemplate[0])
 ```
 
 ### Syntax
-Temple templates are valid XML-tree:
+formerjs templates are valid XML-tree:
 ```xml
 <div id="{{id}}">
   {{name}}
@@ -142,7 +142,7 @@ templates.info().free
 Return DOM element
 
 ### .child_template_name()
-Temple provide setters for child template, for template `my_template`
+formerjs provide setters for child template, for template `my_template`
 ```xml
 <ul>
   <forall key="items">
@@ -155,5 +155,3 @@ You'll have
 myTemplate = templates.get('my_template')[1]
 myTemplate.items([{"data": "some data"}, {"data": "some data2"}])
 ```
-
-

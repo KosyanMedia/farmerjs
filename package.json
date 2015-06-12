@@ -1,11 +1,12 @@
 {
-  "name": "temple",
-  "description": "",
+  "name": "formerjs",
+  "description": "Template engine with unique Extra-Virgin-Single-Pass™ compiler technology",
   "version": "0.1.1",
   "author": "Boris Kaplunovsky",
+  "browser": "./formerjs_utils.js",
   "main": "./priest.js",
   "bin": {
-    "temple": "./bin/temple"
+    "formerjs": "./bin/formerjs"
   },
   "dependencies": {
     "xmldom": "^0.1.19"

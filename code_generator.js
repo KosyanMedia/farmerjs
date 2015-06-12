@@ -261,9 +261,9 @@
           }
           accessors[variable[0]] = accessors[variable[0]] || [];
           if(instruction == 'if') {
-            accessors[variable[0]].push('temple_utils.render_child(after_' + tpl_id + ', "' + tpl + '", ' + getter('a', variable) + ', pool, child_' + tpl_id + ')');
+            accessors[variable[0]].push('formerjs_utils.render_child(after_' + tpl_id + ', "' + tpl + '", ' + getter('a', variable) + ', pool, child_' + tpl_id + ')');
           } else if(instruction == 'forall') {
-            accessors[variable[0]].push('temple_utils.render_children(after_' + tpl_id + ', "' + tpl + '", ' + getter('a', variable) + ', pool, child_' + tpl_id + ')');
+            accessors[variable[0]].push('formerjs_utils.render_children(after_' + tpl_id + ', "' + tpl + '", ' + getter('a', variable) + ', pool, child_' + tpl_id + ')');
           }
         }
       }

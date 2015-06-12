@@ -65,7 +65,7 @@
     return methods;
   };
 
-  var container = typeof module !== "undefined" ? module.exports : (window.temple_utils = {});
+  var container = typeof module !== "undefined" ? module.exports : (window.formerjs_utils = {});
   container.render_children = render_children;
   container.render_child = render_child;
   container.pool = pool;

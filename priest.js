@@ -45,7 +45,7 @@
     } else {
       return '(function(window){' +
         'var templates_list = {' + templates_code.join(',') + '};' +
-        'window.templates = temple_utils.pool(templates_list);' +
+        'window.templates = formerjs_utils.pool(templates_list);' +
         '})(window);';
     }
   };

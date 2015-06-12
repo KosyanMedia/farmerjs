@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var temple = require('./../priest');
+var formerjs = require('./../priest');
 var args = process.argv.slice(2);
 var options = {
   as_module: false,
@@ -29,12 +29,12 @@ args.forEach(function(arg){
 });
 
 if (options.help || !files.length) {
-  console.log("Usage: temple template.temple [template2.temple ...] [options]");
-  console.log("       temple template.temple -m\n");
+  console.log("Usage: formerjs template.formerjs [template2.formerjs ...] [options]");
+  console.log("       formerjs template.formerjs -m\n");
   console.log("Options:");
   console.log("  -m, --as-module     build as module");
   console.log("  -d, --drop-spaces   result without spaces");
 } else {
-  var template = temple(files, options.as_module, options.drop_spaces);
+  var template = formerjs(files, options.as_module, options.drop_spaces);
   console.log(template);
 }
